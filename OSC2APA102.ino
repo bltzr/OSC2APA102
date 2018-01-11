@@ -23,11 +23,11 @@
 
 // How many leds in each of your strips?
 #if nStrips > 0
-#define NUM_LEDS1 320      // <-- # of LEDs in strip 1
+numLEDs[0] = 320;         // <-- # of LEDs in strip 1
 #elif nStrips > 1
-#define NUM_LEDS2 320      // <-- # of LEDs in strip 2
+numLEDs[1] = 320;         // <-- # of LEDs in strip 2
 #elif nStrips > 2
-#define NUM_LEDS3 320      // <-- # of LEDs in strip 3
+numLEDs[2] = 320;         // <-- # of LEDs in strip 3
 #endif
 
 #if DMX
@@ -39,14 +39,14 @@
 // (four wires - data, clock, ground, and power),
 // so we have to define DATA_PIN and CLOCK_PIN:
 #if nStrips > 0                  // - for LED strip 1:
-#define DATA_PIN1 11      // <-- pin number for DATA (MOSI, green wire)
-#define CLOCK_PIN1 27     // <-- pin number for CLOCK (SCK, yellow wire) - NB: use 27 for teensy >= 3.5 / for teensy <3.5, use pin 13 (which causes the LED to stay lit)
+dataPin[0] = 11;          // <-- pin number for DATA (MOSI, green wire)
+clockPin[0] = 27;         // <-- pin number for CLOCK (SCK, yellow wire) - NB: use 27 for teensy >= 3.5 / for teensy <3.5, use pin 13 (which causes the LED to stay lit)
 #elif nStrips > 1               // - for LED strip 2
-#define DATA_PIN2 7       // <-- pin number for DATA (MOSI, green wire)
-#define CLOCK_PIN2 14     // <-- pin number for CLOCK (SCK, yellow wire)
+dataPin[1] = 7;           // <-- pin number for DATA (MOSI, green wire)
+clockPin[1] = 14;         // <-- pin number for CLOCK (SCK, yellow wire)
 #elif nStrips > 2              // - for LED strip 3 // only for teensy >= 3.5
-#define DATA_PIN3 21      // <-- pin number for DATA (MOSI, green wire)
-#define CLOCK_PIN3 20     // <-- pin number for DATA (MOSI, green wire)
+dataPin[2] = 21;          // <-- pin number for DATA (MOSI, green wire)
+clockPin[2] = 20;         // <-- pin number for DATA (MOSI, green wire)
 #endif
 
 
@@ -64,6 +64,7 @@ PacketSerial_<SLIP, SLIP::END, 8192> serial;
 
 // Here we create the LED controllers for FastLED (see .h file as 2d tab)
 LedStrip *ledStrips[nStrips];
+uint8_t numLEDs[nStrips], dataPin[nStrips], clockPin[nStrips];
 
 
 #if DMX
@@ -82,55 +83,17 @@ void setup() {
 
 
   for (int i=0;i<nStrips;i++){
-    std::string dp = "DATA_PIN", cp = "CLOCK_PIN", nl = "NUM_LEDS", lc="ledController";
-    ledStrips[i] = new LedStrip(dp+i, cp+i, nl+i, lc+i) ;
+    ledStrips[i] = new LedStrip(dataPin[i], clockPin[i], numLEDs[i]) ;
+    ledStrips[i]->ledController.setAPA102Brightness(1);
   }
 
-
-  // Add the LED controller to FastLED
-  
-  FastLED.addLeds((CLEDController*) &ledController2, leds2, NUM_LEDS);
-
+  #if DMX
   // Now set DMX mode
   Dmx.setMode(TeensyDmx::DMX_OUT);
-
-  // Setting brightness to minimum
-  ledController.setAPA102Brightness(1);
-  ledController2.setAPA102Brightness(1);
+  #endif
   
     // Turn off all LEDs 
   FastLED.show(CRGB::Black);
-}
-
-
-/////////////////////////////////////////////////////////////////////
-// Parsing the OSC messages for /1 (int or Blob)
-void LEDcontrol(OSCMessage &msg)
-{
-  // When receiving an int, we set the APA102's global brightness (0 to 31)
-  if (msg.isInt(0))
-  {
-    ledController1.setAPA102Brightness(msg.getInt(0));
-  }
-  // When receiving a Blob, we assume it's a list of RGB values
-  else if (msg.isBlob(0))
-  {
-    msg.getBlob(0, (unsigned char *)leds, NUM_LEDS*3);
-  }
-}
-
-/////////////////////////////////////////////////////////////////////
-// Parsing the OSC messages for /2 (2nd  LED strip)
-void LEDcontrol2(OSCMessage &msg)
-{
-  if (msg.isInt(0))
-  {
-    ledController2.setAPA102Brightness(msg.getInt(0));
-  }
-  else if (msg.isBlob(0))
-  {
-    msg.getBlob(0, (unsigned char *)leds2, NUM_LEDS2*3);
-  }
 }
 
 /////////////////////////////////////////////////////////////////////
@@ -143,8 +106,11 @@ void setGlobalBrightness(OSCMessage &msg)
   }
 }
 
+
+
 /////////////////////////////////////////////////////////////////////
 // This part actually sends the DMX
+#if DMX
 void setDMX(OSCMessage &msg)
 {
   if (msg.isBlob(0))
@@ -152,6 +118,7 @@ void setDMX(OSCMessage &msg)
     Dmx.setChannels(0, DMXvalues, msg.getBlob(0, (unsigned char *)DMXvalues));
   }
 }
+#endif
 
 
 /////////////////////////////////////////////////////////////////////
@@ -164,8 +131,9 @@ void onPacket(const uint8_t* buffer, size_t size) {
   }
 
   if (!bundleIN.hasError()) {
-    bundleIN.dispatch("/1", LEDcontrol);
-    bundleIN.dispatch("/2", LEDcontrol2);
+    bundleIN.dispatch("/1", ledStrips[0]->LEDcontrol);
+    bundleIN.dispatch("/2", ledStrips[1]->LEDcontrol);
+    bundleIN.dispatch("/3", ledStrips[2]->LEDcontrol);
     bundleIN.dispatch("/b", setGlobalBrightness);
     bundleIN.dispatch("/DMX", setDMX);
   }
