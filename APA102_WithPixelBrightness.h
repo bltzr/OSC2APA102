@@ -1,20 +1,20 @@
 #include <FastLED.h>
 
-template <uint8_t DATA_PIN, uint8_t CLOCK_PIN, EOrder RGB_ORDER = BGR, uint8_t SPI_SPEED = DATA_RATE_MHZ(24)>
-class APA102Controller_WithBrightness : public CLEDController {
+template <uint8_t DATA_PIN, uint8_t CLOCK_PIN, EOrder RGB_ORDER = BGR, uint8_t SPI_SPEED = DATA_RATE_MHZ(12)>
+class APA102Controller_WithPixelBrightness : public CPixelLEDController<RGB_ORDER> {
   typedef SPIOutput<DATA_PIN, CLOCK_PIN, SPI_SPEED> SPI;
   SPI mSPI;
-  uint8_t bBaseValue;
+  uint8_t[] bPixels;
 
   void startBoundary() { mSPI.writeWord(0); mSPI.writeWord(0); }
-  void endBoundary(int nLeds) { int nBytes = (nLeds/32); do { mSPI.writeWord(0xFF00); mSPI.writeWord(0x0000); } while(nBytes--); }
+	void endBoundary(int nLeds) { int nDWords = (nLeds/32); do { mSPI.writeByte(0xFF); mSPI.writeByte(0x00); mSPI.writeByte(0x00); mSPI.writeByte(0x00); } while(nDWords--); }
 
-  inline void writeLed(uint8_t b0, uint8_t b1, uint8_t b2) __attribute__((always_inline)) {
-    mSPI.writeByte(bBaseValue); mSPI.writeByte(b0); mSPI.writeByte(b1); mSPI.writeByte(b2);
+  inline void writeLed(uint8_t bb, uint8_t b0, uint8_t b1, uint8_t b2) __attribute__((always_inline)) {
+    mSPI.writeByte(bb); mSPI.writeByte(b0); mSPI.writeByte(b1); mSPI.writeByte(b2);
   }
 
 public:
-  APA102Controller_WithBrightness() {bBaseValue = 0xFF;}
+  APA102Controller_WithPixelBrightness() {bBaseValue = 0xFF;}
 
   virtual void init() {
     mSPI.init();
@@ -75,7 +75,7 @@ protected:
 
 #ifdef SUPPORT_ARGB
   virtual void show(const struct CRGB *data, int nLeds, CRGB scale) {
-    PixelController<RGB_ORDER> pixels(data, nLeds,, scale, getDither());
+    PixelController<RGB_ORDER> pixels(data, nLeds, scale, getDither());
 
     mSPI.select();
 
