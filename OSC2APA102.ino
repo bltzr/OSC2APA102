@@ -9,7 +9,7 @@
 
 */
 
-#include "APA102_WithGlobalBrightness.h"
+#include "APA102_With8bitBrightness.h"
 
 /////////////////////////////////////////////////////////////////////
 // THIS IS THE PART THAT NEEDS TO BE CONFIGURED BASED ON YOUR NEED //
