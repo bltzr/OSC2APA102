@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"revision" : 5,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -76,8 +76,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -206,8 +206,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -249,8 +249,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -403,8 +403,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -485,8 +485,8 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 3,
-															"revision" : 4,
-															"architecture" : "x86",
+															"revision" : 5,
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -625,8 +625,8 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 3,
-															"revision" : 4,
-															"architecture" : "x86",
+															"revision" : 5,
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -1264,14 +1264,6 @@
 , 											{
 												"name" : "jpink",
 												"default" : 												{
-													"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-													"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-													"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-													"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-													"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-													"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-													"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-													"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 													"bgfillcolor" : 													{
 														"type" : "color",
 														"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -1281,7 +1273,15 @@
 														"proportion" : 0.39,
 														"autogradient" : 0
 													}
-
+,
+													"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+													"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+													"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
+													"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+													"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+													"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+													"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+													"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 												}
 ,
 												"parentstyle" : "",
@@ -1308,8 +1308,8 @@
 , 											{
 												"name" : "newobjYellow-1",
 												"default" : 												{
-													"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-													"fontsize" : [ 12.059008 ]
+													"fontsize" : [ 12.059008 ],
+													"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 												}
 ,
 												"parentstyle" : "",
@@ -1336,8 +1336,8 @@
 , 											{
 												"name" : "texteditGold",
 												"default" : 												{
-													"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ],
-													"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
+													"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+													"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ]
 												}
 ,
 												"parentstyle" : "",
@@ -1711,8 +1711,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2161,8 +2161,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2402,8 +2402,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2604,58 +2604,59 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u526000269" ],
 													"dim" : [ 1, 1 ],
+													"vol" : [ 1.0 ],
+													"interp" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"unique" : [ 0 ],
+													"loopreport" : [ 0 ],
+													"window" : [ "" ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"automatic" : [ 0 ],
+													"colormode" : [ "argb" ],
+													"time_secs" : [ 0.0 ],
+													"moviefile" : [ "" ],
+													"output_texture" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"drawto" : [ "" ],
+													"autostart" : [ 1 ],
+													"usedstrect" : [ 0 ],
+													"position" : [ 0.0 ],
+													"time" : [ 0 ],
+													"loopend" : [ 0 ],
+													"engine" : [ "avf" ],
+													"texture_name" : [ "u414000267" ],
+													"duration" : [  ],
+													"adapt" : [ 1 ],
+													"framereport" : [ 0 ],
+													"rate" : [ 1.0 ],
+													"loopstart" : [ 0 ],
 													"usesrcrect" : [ 0 ],
 													"voc" : [ 0 ],
-													"texture_name" : [ "u414000267" ],
 													"editduration" : [  ],
 													"vocmode" : [ 0 ],
 													"deinterlace" : [ 1 ],
-													"colormode" : [ "argb" ],
 													"usemovieloop" : [ 0 ],
-													"window" : [ "" ],
 													"editmode" : [ 0 ],
 													"id3date" : [ "" ],
-													"output_texture" : [ 0 ],
-													"interp" : [ 0 ],
 													"autosave" : [ 0 ],
-													"usedstrect" : [ 0 ],
-													"engine" : [ "avf" ],
 													"preroll" : [ 0 ],
-													"drawto" : [ "" ],
-													"time_secs" : [ 0.0 ],
 													"singlefield" : [ 1 ],
 													"codecquality" : [ "normal" ],
-													"moviefile" : [ "" ],
 													"timecodevis" : [ 0 ],
 													"voc_sound_mode" : [ 0 ],
 													"id3name" : [ "" ],
-													"framereport" : [ 0 ],
-													"position" : [ 0.0 ],
-													"loopreport" : [ 0 ],
-													"duration" : [  ],
-													"vol" : [ 1.0 ],
 													"soc" : [ "" ],
 													"id3comment" : [ "" ],
 													"vrtilt" : [ 0.0 ],
 													"use_movie_loop" : [ 0 ],
 													"id3artist" : [ "" ],
-													"unique" : [ 0 ],
 													"codec" : [ "" ],
 													"id3album" : [ "" ],
 													"id3url" : [ "" ],
-													"loopstart" : [ 0 ],
-													"rate" : [ 1.0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"autostart" : [ 1 ],
-													"loopend" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
 													"vrquality" : [ 0 ],
 													"exporter" : [ 0 ],
 													"id3track" : [ "" ],
-													"adapt" : [ 1 ],
 													"vrpan" : [ 0.0 ],
-													"time" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
 													"poster" : [ 0 ],
 													"acodec" : [ "" ],
 													"vrfov" : [ 0.0 ],
@@ -2664,7 +2665,6 @@
 													"moviename" : [ "" ],
 													"vrcorrection" : [ 0 ],
 													"id3encoder" : [ "" ],
-													"automatic" : [ 0 ],
 													"edittime" : [ 0 ]
 												}
 
@@ -2677,58 +2677,59 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u281000515" ],
 													"dim" : [ 1, 1 ],
+													"vol" : [ 1.0 ],
+													"interp" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"unique" : [ 0 ],
+													"loopreport" : [ 0 ],
+													"window" : [ "" ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"automatic" : [ 0 ],
+													"colormode" : [ "argb" ],
+													"time_secs" : [ 0.0 ],
+													"moviefile" : [ "" ],
+													"output_texture" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"drawto" : [ "" ],
+													"autostart" : [ 1 ],
+													"usedstrect" : [ 0 ],
+													"position" : [ 0.0 ],
+													"time" : [ 0 ],
+													"loopend" : [ 0 ],
+													"engine" : [ "qt" ],
+													"texture_name" : [ "u334000508" ],
+													"duration" : [  ],
+													"adapt" : [ 1 ],
+													"framereport" : [ 0 ],
+													"rate" : [ 1.0 ],
+													"loopstart" : [ 0 ],
 													"usesrcrect" : [ 0 ],
 													"voc" : [ 0 ],
-													"texture_name" : [ "u334000508" ],
 													"editduration" : [  ],
 													"vocmode" : [ 0 ],
 													"deinterlace" : [ 1 ],
-													"colormode" : [ "argb" ],
 													"usemovieloop" : [ 0 ],
-													"window" : [ "" ],
 													"editmode" : [ 0 ],
 													"id3date" : [ "" ],
-													"output_texture" : [ 0 ],
-													"interp" : [ 0 ],
 													"autosave" : [ 0 ],
-													"usedstrect" : [ 0 ],
-													"engine" : [ "qt" ],
 													"preroll" : [ 0 ],
-													"drawto" : [ "" ],
-													"time_secs" : [ 0.0 ],
 													"singlefield" : [ 1 ],
 													"codecquality" : [ "normal" ],
-													"moviefile" : [ "" ],
 													"timecodevis" : [ 0 ],
 													"voc_sound_mode" : [ 0 ],
 													"id3name" : [ "" ],
-													"framereport" : [ 0 ],
-													"position" : [ 0.0 ],
-													"loopreport" : [ 0 ],
-													"duration" : [  ],
-													"vol" : [ 1.0 ],
 													"soc" : [ "" ],
 													"id3comment" : [ "" ],
 													"vrtilt" : [ 0.0 ],
 													"use_movie_loop" : [ 0 ],
 													"id3artist" : [ "" ],
-													"unique" : [ 0 ],
 													"codec" : [ "" ],
 													"id3album" : [ "" ],
 													"id3url" : [ "" ],
-													"loopstart" : [ 0 ],
-													"rate" : [ 1.0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"autostart" : [ 1 ],
-													"loopend" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
 													"vrquality" : [ 0 ],
 													"exporter" : [ 0 ],
 													"id3track" : [ "" ],
-													"adapt" : [ 1 ],
 													"vrpan" : [ 0.0 ],
-													"time" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
 													"poster" : [ 0 ],
 													"acodec" : [ "" ],
 													"vrfov" : [ 0.0 ],
@@ -2737,7 +2738,6 @@
 													"moviename" : [ "" ],
 													"vrcorrection" : [ 0 ],
 													"id3encoder" : [ "" ],
-													"automatic" : [ 0 ],
 													"edittime" : [ 0 ]
 												}
 
@@ -2750,58 +2750,59 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u481000018" ],
 													"dim" : [ 1, 1 ],
+													"vol" : [ 1.0 ],
+													"interp" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"unique" : [ 0 ],
+													"loopreport" : [ 0 ],
+													"window" : [ "" ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"automatic" : [ 0 ],
+													"colormode" : [ "argb" ],
+													"time_secs" : [ 0.0 ],
+													"moviefile" : [ "" ],
+													"output_texture" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"drawto" : [ "" ],
+													"autostart" : [ 1 ],
+													"usedstrect" : [ 0 ],
+													"position" : [ 0.0 ],
+													"time" : [ 0 ],
+													"loopend" : [ 0 ],
+													"engine" : [ "avf" ],
+													"texture_name" : [ "u809000016" ],
+													"duration" : [  ],
+													"adapt" : [ 1 ],
+													"framereport" : [ 0 ],
+													"rate" : [ 1.0 ],
+													"loopstart" : [ 0 ],
 													"usesrcrect" : [ 0 ],
 													"voc" : [ 0 ],
-													"texture_name" : [ "u809000016" ],
 													"editduration" : [  ],
 													"vocmode" : [ 0 ],
 													"deinterlace" : [ 1 ],
-													"colormode" : [ "argb" ],
 													"usemovieloop" : [ 0 ],
-													"window" : [ "" ],
 													"editmode" : [ 0 ],
 													"id3date" : [ "" ],
-													"output_texture" : [ 0 ],
-													"interp" : [ 0 ],
 													"autosave" : [ 0 ],
-													"usedstrect" : [ 0 ],
-													"engine" : [ "avf" ],
 													"preroll" : [ 0 ],
-													"drawto" : [ "" ],
-													"time_secs" : [ 0.0 ],
 													"singlefield" : [ 1 ],
 													"codecquality" : [ "normal" ],
-													"moviefile" : [ "" ],
 													"timecodevis" : [ 0 ],
 													"voc_sound_mode" : [ 0 ],
 													"id3name" : [ "" ],
-													"framereport" : [ 0 ],
-													"position" : [ 0.0 ],
-													"loopreport" : [ 0 ],
-													"duration" : [  ],
-													"vol" : [ 1.0 ],
 													"soc" : [ "" ],
 													"id3comment" : [ "" ],
 													"vrtilt" : [ 0.0 ],
 													"use_movie_loop" : [ 0 ],
 													"id3artist" : [ "" ],
-													"unique" : [ 0 ],
 													"codec" : [ "" ],
 													"id3album" : [ "" ],
 													"id3url" : [ "" ],
-													"loopstart" : [ 0 ],
-													"rate" : [ 1.0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"autostart" : [ 1 ],
-													"loopend" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
 													"vrquality" : [ 0 ],
 													"exporter" : [ 0 ],
 													"id3track" : [ "" ],
-													"adapt" : [ 1 ],
 													"vrpan" : [ 0.0 ],
-													"time" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
 													"poster" : [ 0 ],
 													"acodec" : [ "" ],
 													"vrfov" : [ 0.0 ],
@@ -2810,7 +2811,6 @@
 													"moviename" : [ "" ],
 													"vrcorrection" : [ 0 ],
 													"id3encoder" : [ "" ],
-													"automatic" : [ 0 ],
 													"edittime" : [ 0 ]
 												}
 
@@ -7614,14 +7614,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -7631,7 +7623,15 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7658,8 +7658,8 @@
 , 							{
 								"name" : "newobjYellow-1",
 								"default" : 								{
-									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-									"fontsize" : [ 12.059008 ]
+									"fontsize" : [ 12.059008 ],
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7686,8 +7686,8 @@
 , 							{
 								"name" : "texteditGold",
 								"default" : 								{
-									"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ],
-									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
+									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7723,8 +7723,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -7847,8 +7847,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -16635,8 +16635,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -16678,8 +16678,8 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 3,
-															"revision" : 4,
-															"architecture" : "x86",
+															"revision" : 5,
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -21870,8 +21870,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -22190,8 +22190,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -23220,8 +23220,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -23576,8 +23576,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -23788,8 +23788,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -24121,7 +24121,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-101",
-					"items" : "Bluetooth-Incoming-Port",
+					"items" : [ "Bluetooth-Incoming-Port", ",", "usbmodem3262751" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -24158,8 +24158,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -24340,8 +24340,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -25470,8 +25470,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -26001,8 +26001,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 5,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -26513,7 +26513,7 @@
 
 									}
 ,
-									"size" : 32.0,
+									"size" : 256.0,
 									"style" : "",
 									"varname" : "slider[4]"
 								}
@@ -26602,7 +26602,7 @@
 									}
 ,
 									"setminmax" : [ 0.0, 1.0 ],
-									"size" : 144,
+									"size" : 132,
 									"style" : "",
 									"varname" : "multislider[1]"
 								}
@@ -26702,7 +26702,7 @@
 
 									}
 ,
-									"size" : 32.0,
+									"size" : 256.0,
 									"style" : "",
 									"varname" : "slider"
 								}
@@ -26729,7 +26729,7 @@
 									}
 ,
 									"setminmax" : [ 0.0, 1.0 ],
-									"size" : 70,
+									"size" : 128,
 									"style" : "",
 									"varname" : "multislider"
 								}
@@ -26756,7 +26756,7 @@
 									"maxclass" : "mira.frame",
 									"numinlets" : 0,
 									"numoutlets" : 0,
-									"patching_rect" : [ 99.799988, 139.097412, 358.399994, 254.799988 ],
+									"patching_rect" : [ 99.799988, 139.097412, 358.399992, 254.799988 ],
 									"tabname" : "1st",
 									"taborder" : 1
 								}
@@ -26770,7 +26770,7 @@
 									"maxclass" : "mira.frame",
 									"numinlets" : 0,
 									"numoutlets" : 0,
-									"patching_rect" : [ 501.0, 139.097412, 358.399994, 254.799988 ],
+									"patching_rect" : [ 501.0, 139.097412, 358.399992, 254.799988 ],
 									"tabname" : "2nd",
 									"taborder" : 2
 								}
@@ -27075,8 +27075,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 5,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -27767,37 +27767,37 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-105" : [ "slider[5]", "slider", 0 ],
-			"obj-149::obj-103" : [ "multislider[2]", "multislider", 0 ],
-			"obj-151::obj-68" : [ "live.text[3]", "live.text", 0 ],
-			"obj-98::obj-54" : [ "slider[8]", "slider", 0 ],
-			"obj-151::obj-41" : [ "live.text[1]", "live.text", 0 ],
 			"obj-149::obj-9" : [ "multislider[3]", "multislider", 0 ],
+			"obj-98::obj-26" : [ "slider[1]", "slider", 0 ],
+			"obj-98::obj-50" : [ "slider[7]", "slider", 0 ],
+			"obj-149::obj-103" : [ "multislider[2]", "multislider", 0 ],
+			"obj-98::obj-27" : [ "number[2]", "number[1]", 0 ],
+			"obj-98::obj-21" : [ "slider[2]", "slider", 0 ],
+			"obj-149::obj-2" : [ "slider[11]", "slider", 0 ],
+			"obj-98::obj-22" : [ "swatch[1]", "swatch", 0 ],
+			"obj-98::obj-25" : [ "swatch", "swatch", 0 ],
+			"obj-149::obj-83" : [ "slider[9]", "slider", 0 ],
+			"obj-149::obj-24" : [ "slider[15]", "slider", 0 ],
+			"obj-98::obj-54" : [ "slider[8]", "slider", 0 ],
+			"obj-98::obj-19" : [ "number[1]", "number[1]", 0 ],
+			"obj-98::obj-47::obj-100" : [ "number", "number", 0 ],
+			"obj-98::obj-49" : [ "toggle[1]", "toggle[1]", 0 ],
+			"obj-98::obj-47::obj-5" : [ "number[4]", "number[4]", 0 ],
+			"obj-1" : [ "slider[3]", "slider", 0 ],
+			"obj-98::obj-4" : [ "slider[4]", "slider", 0 ],
 			"obj-149::obj-94" : [ "slider[10]", "slider", 0 ],
+			"obj-98::obj-9" : [ "multislider", "multislider", 0 ],
+			"obj-151::obj-83" : [ "slider[12]", "slider", 0 ],
+			"obj-149::obj-25" : [ "swatch[3]", "swatch", 0 ],
+			"obj-105" : [ "slider[5]", "slider", 0 ],
+			"obj-98::obj-2" : [ "slider[6]", "slider", 0 ],
+			"obj-151::obj-41" : [ "live.text[1]", "live.text", 0 ],
 			"obj-98::obj-10" : [ "toggle[3]", "toggle[1]", 0 ],
 			"obj-151::obj-69" : [ "live.text[4]", "live.text", 0 ],
-			"obj-1" : [ "slider[3]", "slider", 0 ],
-			"obj-98::obj-2" : [ "slider[6]", "slider", 0 ],
 			"obj-98::obj-30" : [ "multislider[1]", "multislider", 0 ],
-			"obj-98::obj-19" : [ "number[1]", "number[1]", 0 ],
-			"obj-98::obj-9" : [ "multislider", "multislider", 0 ],
-			"obj-98::obj-47::obj-5" : [ "number[4]", "number[4]", 0 ],
-			"obj-98::obj-4" : [ "slider[4]", "slider", 0 ],
-			"obj-149::obj-24" : [ "slider[15]", "slider", 0 ],
-			"obj-98::obj-49" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-98::obj-21" : [ "slider[2]", "slider", 0 ],
-			"obj-98::obj-47::obj-100" : [ "number", "number", 0 ],
-			"obj-149::obj-25" : [ "swatch[3]", "swatch", 0 ],
-			"obj-151::obj-83" : [ "slider[12]", "slider", 0 ],
-			"obj-149::obj-83" : [ "slider[9]", "slider", 0 ],
-			"obj-151::obj-59" : [ "live.text[2]", "live.text", 0 ],
-			"obj-98::obj-50" : [ "slider[7]", "slider", 0 ],
-			"obj-98::obj-27" : [ "number[2]", "number[1]", 0 ],
-			"obj-98::obj-26" : [ "slider[1]", "slider", 0 ],
-			"obj-98::obj-25" : [ "swatch", "swatch", 0 ],
+			"obj-151::obj-68" : [ "live.text[3]", "live.text", 0 ],
 			"obj-98::obj-24" : [ "slider", "slider", 0 ],
-			"obj-98::obj-22" : [ "swatch[1]", "swatch", 0 ],
-			"obj-149::obj-2" : [ "slider[11]", "slider", 0 ]
+			"obj-151::obj-59" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
