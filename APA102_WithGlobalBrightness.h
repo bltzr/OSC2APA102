@@ -1,11 +1,13 @@
 #include <FastLED.h>
+#include <fastspi.h>
 
 template <
-    uint8_t DATA_PIN, uint8_t CLOCK_PIN, EOrder RGB_ORDER = BGR,
-    uint8_t SPI_SPEED = DATA_RATE_MHZ(12)>
+    uint8_t DATA_PIN, uint8_t CLOCK_PIN, EOrder RGB_ORDER, uint8_t SPI_SPEED,
+    auto& SPI_Object, int SPI_Index>
 class APA102Controller_WithBrightness : public CLEDController
 {
-  typedef SPIOutput<DATA_PIN, CLOCK_PIN, SPI_SPEED> SPI;
+  typedef Teesy4HardwareSPIOutput<DATA_PIN, CLOCK_PIN, SPI_SPEED, SPI_Object, SPI_Index>
+      SPI;
   SPI mSPI;
   uint8_t bBaseValue;
 

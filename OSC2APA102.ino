@@ -15,7 +15,7 @@
 // THIS IS THE PART THAT NEEDS TO BE CONFIGURED BASED ON YOUR NEEDS //
 //////////////////////////////////////////////////////////////////////
 
-#define nStrips 1 // <-- How many strips do you want to use ?
+#define nStrips 2 // <-- How many strips do you want to use ?
 
 #define DMX 1 // <-- set to 1 to use DMX, to 0 not to use it
 
@@ -34,12 +34,12 @@
 // (four wires - data, clock, ground, and power),
 // so we have to define DATA_PIN and CLOCK_PIN:
 #if nStrips > 0       // - for LED strip 1:
-#define DATA_PIN1 7   // <-- pin number for DATA (MOSI, green wire)
-#define CLOCK_PIN1 14 // <-- pin number for CLOCK (SCK, yellow wire)
+#define DATA_PIN1 11  // <-- pin number for DATA (MOSI, green wire)
+#define CLOCK_PIN1 13 // <-- pin number for CLOCK (SCK, yellow wire)
 #endif
 #if nStrips > 1       // - for LED strip 2
-#define DATA_PIN2 11  // <-- pin number for DATA (MOSI, green wire)
-#define CLOCK_PIN2 13 // <-- pin number for CLOCK (SCK, yellow wire)
+#define DATA_PIN2 26  // <-- pin number for DATA (MOSI, green wire)
+#define CLOCK_PIN2 27 // <-- pin number for CLOCK (SCK, yellow wire)
 #endif
 #if nStrips \
     > 2 // - for LED strip 3 // only for teensy >= 3.5, note this might cause flickering in the 3rd strip
@@ -66,7 +66,7 @@ PacketSerial_<SLIP, SLIP::END, 8192> serial;
 #if nStrips > 0
 
 // Here we create the LED controllers for FastLED (see .h file as 2d tab)
-APA102Controller_WithBrightness<DATA_PIN1, CLOCK_PIN1, BGR, DATA_RATE_MHZ(12)>
+APA102Controller_WithBrightness<DATA_PIN1, CLOCK_PIN1, BGR, DATA_RATE_MHZ(12), ::SPI, 0>
     ledController1;
 // Array containing the RGB values for all LEDs of the strip
 CRGB leds1[NUM_LEDS1];
@@ -90,7 +90,7 @@ void LEDcontrol1(OSCMessage& msg)
 /////////////////////////////////////////////////////////////////////
 #if nStrips > 1
 
-APA102Controller_WithBrightness<DATA_PIN2, CLOCK_PIN2, BGR, DATA_RATE_MHZ(12)>
+APA102Controller_WithBrightness<DATA_PIN2, CLOCK_PIN2, BGR, DATA_RATE_MHZ(12), ::SPI1, 0>
     ledController2;
 CRGB leds2[NUM_LEDS2];
 
@@ -111,7 +111,7 @@ void LEDcontrol2(OSCMessage& msg)
 /////////////////////////////////////////////////////////////////////
 #if nStrips > 2
 
-APA102Controller_WithBrightness<DATA_PIN3, CLOCK_PIN3, BGR, DATA_RATE_MHZ(12)>
+APA102Controller_WithBrightness<DATA_PIN3, CLOCK_PIN3, BGR, DATA_RATE_MHZ(12), ::SPI2, 0>
     ledController3;
 CRGB leds3[NUM_LEDS3];
 
@@ -174,32 +174,61 @@ void setGlobalBrightness(OSCMessage& msg)
 // This is where the OSC address parsing happens:
 void onPacket(const uint8_t* buffer, size_t size)
 {
-  OSCBundle bundleIN;
+  if(size < 6)
+    return;
 
-  for(size_t i = 0; i < size; i++)
+  if(buffer[0] == '#')
   {
-    bundleIN.fill(buffer[i]);
-  }
+    FastLED.show();
+    OSCBundle bundleIN;
 
-  if(!bundleIN.hasError())
-  {
+    bundleIN.fill((uint8_t*)buffer, size);
+
+    if(!bundleIN.hasError())
+    {
 #if nStrips > 0
-    bundleIN.dispatch("/1", LEDcontrol1);
+      bundleIN.dispatch("/1", LEDcontrol1);
 #endif
 
 #if nStrips > 1
-    bundleIN.dispatch("/2", LEDcontrol2);
+      bundleIN.dispatch("/2", LEDcontrol2);
 #endif
 
 #if nStrips > 2
-    bundleIN.dispatch("/3", LEDcontrol3);
+      bundleIN.dispatch("/3", LEDcontrol3);
 #endif
 
 #if DMX
-    bundleIN.dispatch("/DMX", setDMX);
+      bundleIN.dispatch("/DMX", setDMX);
 #endif
 
-    bundleIN.dispatch("/b", setGlobalBrightness);
+      bundleIN.dispatch("/b", setGlobalBrightness);
+    }
+  }
+  else
+  {
+    OSCMessage messageIN;
+    messageIN.fill((uint8_t*)buffer, size);
+    if(!messageIN.hasError())
+    {
+#if nStrips > 0
+      messageIN.dispatch("/1", LEDcontrol1);
+#endif
+
+#if nStrips > 1
+      messageIN.dispatch("/2", LEDcontrol2);
+#endif
+
+#if nStrips > 2
+      messageIN.dispatch("/3", LEDcontrol3);
+#endif
+
+#if DMX
+      messageIN.dispatch("/DMX", setDMX);
+#endif
+
+      messageIN.dispatch("/b", setGlobalBrightness);
+    }
   }
 }
 
