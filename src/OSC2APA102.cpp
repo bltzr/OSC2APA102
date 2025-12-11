@@ -41,8 +41,7 @@
 #define DATA_PIN2 26  // <-- pin number for DATA (MOSI, green wire)
 #define CLOCK_PIN2 27 // <-- pin number for CLOCK (SCK, yellow wire)
 #endif
-#if nStrips \
-    > 2 // - for LED strip 3 // only for teensy >= 3.5, note this might cause flickering in the 3rd strip
+#if nStrips > 2 // - for LED strip 3 // only for teensy >= 3.5, note this might cause flickering in the 3rd strip
 #define DATA_PIN3 21  // <-- pin number for DATA (MOSI, green wire)
 #define CLOCK_PIN3 20 // <-- pin number for CLOCK (SCK, yellow wire)
 #endif
