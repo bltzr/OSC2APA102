@@ -5,7 +5,7 @@
   to control two APA102 LED strips 
   with some extra DMX output
 
-  Copyright Antoine Villeret / Pia Baltazar - 2015/2018
+  Copyright Antoine Villeret / Pia Baltazar - 2015/2025
 
 */
 
@@ -22,6 +22,7 @@
 // How many leds in each of your strips?
 #if nStrips > 0
 #define NUM_LEDS1 200 // <-- # of LEDs in strip 1
+//#define SIZE1 400 // <-- size of blob received for blob 1
 #endif
 #if nStrips > 1
 #define NUM_LEDS2 200 // <-- # of LEDs in strip 2
@@ -48,7 +49,8 @@
 
 #if DMX
 // How many DMX channels at Max?
-#define NUM_DMX 66 // <-- # of DMX Channels
+#define NUM_DMX 8 // <-- # of DMX Channels
+#define DMX_PIN 17 // <-- pin of DMX output
 #endif
 
 /////////////////////////////////////////////////////////////////////
@@ -82,6 +84,8 @@ void LEDcontrol1(OSCMessage& msg)
   else if(msg.isBlob(0))
   {
     msg.getBlob(0, (unsigned char*)leds1, NUM_LEDS1 * 3);
+    //msg.getBlob(0, (unsigned char*)leds1, SIZE1, 0, NUM_LEDS1 * 3);
+
   }
 }
 #endif
@@ -133,7 +137,7 @@ void LEDcontrol3(OSCMessage& msg)
 #include <TeensyDMX.h>
 namespace teensydmx = ::qindesign::teensydmx;
 
-constexpr uint8_t kTXPin = 17;
+constexpr uint8_t kTXPin = DMX_PIN;
 // Create the DMX sender on Serial1.
 teensydmx::Sender dmxTx{Serial1};
 
